@@ -1,0 +1,9 @@
+auto-save-list/*
+backup/*
+elpa/*
+url/*
+eshell/*
+request/*
+tramp
+setup.el
+abbrev_defs
