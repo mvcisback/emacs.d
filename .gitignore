@@ -7,3 +7,4 @@ request/*
 tramp
 setup.el
 abbrev_defs
+/bookmarks
