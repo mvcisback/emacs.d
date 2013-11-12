@@ -95,29 +95,6 @@
                  (insert (current-kill 0)))))
         (global-set-key (kbd "C-c e") 'eval-and-replace)
     #+END_SRC
-* Mail
-#+BEGIN_SRC emacs-lisp
-  (setq
-   user-mail-address "mvc@linux.com"
-   user-full-name  "Marcell J. Vazquez-Chanlatte"
-   message-signature
-   (concat
-    "Marcell J. Vazquez-Chanlatte\n"
-    "https://github.com/mvcisback\n"))
-  (require 'smtpmail)
-  (setq message-send-mail-function 'smtpmail-send-it
-        smtpmail-stream-type 'starttls
-        smtpmail-default-smtp-server "smtp.gmail.com"
-        smtpmail-smtp-server "smtp.gmail.com"
-        smtpmail-smtp-service 587)
-  
-  ;; don't keep message buffers around
-  (setq message-kill-buffer-on-exit t)
-#+END_SRC
-* News
-  #+BEGIN_SRC emacs-lisp
-    (setq gnus-select-method '(nntp "news.gwene.org"))
-  #+END_SRC
 * Code
 ** Paren Control
   #+BEGIN_SRC emacs-lisp 
