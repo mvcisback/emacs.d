@@ -4,6 +4,9 @@
 ;; embedded in literate Org-mode files.
 
 ;; Load up Org Mode and (now included) Org Babel for elisp embedded in Org Mode files
+(require 'package)
+(package-initialize)
+
 (setq dotfiles-dir (file-name-directory (or (buffer-file-name) load-file-name)))
 
 (let* ((org-dir (expand-file-name
@@ -22,5 +25,3 @@
 
 ;; load up all literate org-mode files in this directory
 (mapc #'org-babel-load-file (directory-files dotfiles-dir t "\\.org$"))
-
-;;; init.el ends here
